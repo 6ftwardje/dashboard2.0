@@ -34,9 +34,9 @@ export default function LoginForm() {
         console.log('User:', data.user.email) // Debug log
         console.log('Session:', data.session ? 'Present' : 'Missing') // Debug log
         
-        // Simple redirect - let the dashboard page handle auth check
-        console.log('Redirecting to dashboard...') // Debug log
-        window.location.href = '/dashboard'
+          // Simple redirect - let the modules page handle auth check
+          console.log('Redirecting to modules...') // Debug log
+          window.location.href = '/modules'
       }
     } catch (err) {
       console.error('Login exception:', err) // Debug log
