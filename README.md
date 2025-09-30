@@ -1,6 +1,6 @@
 # Cryptoriez Dashboard 2.0
 
-Een moderne, schaalbare MVP webapplicatie voor cryptocurrency trading educatie.
+Een moderne, schaalbare MVP webapplicatie voor cryptocurrency trading educatie met zwart/oranje design.
 
 ## 🚀 Features
 
@@ -9,8 +9,12 @@ Een moderne, schaalbare MVP webapplicatie voor cryptocurrency trading educatie.
 - **Hoofdstukken**: Video content (Vimeo) + Markdown content
 - **Progress System**: Gamification met badges en progress bars
 - **Resources**: Belangrijke links en tools
-- **Responsive Design**: Mobile-first met TailwindCSS
-- **Dark Mode**: Zwarte achtergrond met blauwe accenten
+- **Responsive Design**: Mobile-first met SF Pro font
+- **Dark Theme**: Zwarte achtergrond met oranje accenten
+- **Toast Notifications**: Real-time feedback systeem
+- **Error Handling**: Robuuste error boundaries
+- **SEO Optimized**: Meta tags, sitemap, robots.txt
+- **PWA Ready**: Web app manifest en service worker support
 
 ## 🛠 Tech Stack
 

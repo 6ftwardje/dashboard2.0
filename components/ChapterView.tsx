@@ -6,6 +6,7 @@ import { User } from '@supabase/supabase-js'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { supabase } from '@/lib/supabase/client'
+import { useToast } from '@/components/ToastProvider'
 
 interface Chapter {
   id: string
@@ -25,6 +26,7 @@ export default function ChapterView({ chapter, user }: ChapterViewProps) {
   const [isCompleted, setIsCompleted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const { addToast } = useToast()
 
   useEffect(() => {
     checkCompletionStatus()
@@ -73,9 +75,24 @@ export default function ChapterView({ chapter, user }: ChapterViewProps) {
 
       setIsCompleted(true)
       console.log('Chapter completed successfully!') // Debug log
+      
+      addToast({
+        type: 'success',
+        title: 'Hoofdstuk voltooid!',
+        message: `Je hebt "${chapter.title}" succesvol afgerond.`,
+        duration: 4000
+      })
     } catch (err) {
       console.error('Error completing chapter:', err) // Debug log
-      setError(err instanceof Error ? err.message : 'Er is een fout opgetreden')
+      const errorMessage = err instanceof Error ? err.message : 'Er is een fout opgetreden'
+      setError(errorMessage)
+      
+      addToast({
+        type: 'error',
+        title: 'Fout bij voltooien',
+        message: errorMessage,
+        duration: 5000
+      })
     } finally {
       setLoading(false)
     }
