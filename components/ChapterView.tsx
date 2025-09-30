@@ -124,7 +124,7 @@ export default function ChapterView({ chapter, user }: ChapterViewProps) {
               </Link>
               <Link
                 href="/logout"
-                className="bg-dark-700 hover:bg-dark-600 text-white px-4 py-2 rounded-lg transition-colors"
+                className="bg-dark-800 hover:bg-dark-700 text-white px-4 py-2 rounded-lg transition-colors"
               >
                 Uitloggen
               </Link>
@@ -157,7 +157,7 @@ export default function ChapterView({ chapter, user }: ChapterViewProps) {
         </div>
 
         {/* Video Section */}
-        <div className="bg-dark-800 rounded-2xl p-6 mb-8">
+        <div className="bg-dark-900 rounded-2xl p-6 mb-8">
           <h2 className="text-xl font-semibold text-white mb-4">Video</h2>
           
           {chapter.video_url && chapter.video_url.includes('vimeo.com') ? (
@@ -199,7 +199,7 @@ export default function ChapterView({ chapter, user }: ChapterViewProps) {
 
         {/* Content Section */}
         {chapter.content && (
-          <div className="bg-dark-800 rounded-2xl p-6 mb-8">
+          <div className="bg-dark-900 rounded-2xl p-6 mb-8">
             <h2 className="text-xl font-semibold text-white mb-4">Inhoud</h2>
             <div className="prose prose-invert max-w-none">
               <ReactMarkdown
@@ -228,7 +228,7 @@ export default function ChapterView({ chapter, user }: ChapterViewProps) {
         )}
 
         {/* Complete Chapter Button */}
-        <div className="bg-dark-800 rounded-2xl p-6">
+        <div className="bg-dark-900 rounded-2xl p-6">
           {error && (
             <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3 mb-4">
               <p className="text-red-400 text-sm">{error}</p>

@@ -54,7 +54,7 @@ export default function ResourcesView({ resources }: ResourcesViewProps) {
             <div className="flex items-center space-x-4">
               <Link
                 href="/logout"
-                className="bg-dark-700 hover:bg-dark-600 text-white px-4 py-2 rounded-lg transition-colors"
+                className="bg-dark-800 hover:bg-dark-700 text-white px-4 py-2 rounded-lg transition-colors"
               >
                 Uitloggen
               </Link>
@@ -76,7 +76,7 @@ export default function ResourcesView({ resources }: ResourcesViewProps) {
         {Object.keys(groupedResources).length > 0 ? (
           <div className="space-y-8">
             {Object.entries(groupedResources).map(([category, categoryResources]) => (
-              <div key={category} className="bg-dark-800 rounded-2xl p-6">
+              <div key={category} className="bg-dark-900 rounded-2xl p-6">
                 <h2 className="text-xl font-semibold text-white mb-4 flex items-center">
                   <div className="w-2 h-2 bg-primary-500 rounded-full mr-3"></div>
                   {categoryLabels[category] || category.charAt(0).toUpperCase() + category.slice(1)}
@@ -92,7 +92,7 @@ export default function ResourcesView({ resources }: ResourcesViewProps) {
                       href={resource.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block bg-dark-700 hover:bg-dark-600 rounded-lg p-4 transition-colors duration-200 group"
+                      className="block bg-dark-800 hover:bg-dark-700 rounded-lg p-4 transition-colors duration-200 group"
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
@@ -130,7 +130,7 @@ export default function ResourcesView({ resources }: ResourcesViewProps) {
         )}
 
         {/* Quick Actions */}
-        <div className="mt-12 bg-dark-800 rounded-2xl p-6">
+        <div className="mt-12 bg-dark-900 rounded-2xl p-6">
           <h2 className="text-xl font-semibold text-white mb-4">Snelle Acties</h2>
           <div className="grid gap-4 md:grid-cols-3">
             <Link

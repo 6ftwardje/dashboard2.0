@@ -121,7 +121,7 @@ export default function Dashboard({ user }: DashboardProps) {
               </Link>
               <Link
                 href="/logout"
-                className="bg-dark-700 hover:bg-dark-600 text-white px-4 py-2 rounded-lg transition-colors"
+                className="bg-dark-800 hover:bg-dark-700 text-white px-4 py-2 rounded-lg transition-colors"
               >
                 Uitloggen
               </Link>
@@ -144,7 +144,7 @@ export default function Dashboard({ user }: DashboardProps) {
           </div>
           
           {/* Progress Bar */}
-          <div className="w-full bg-dark-700 rounded-full h-3 mb-2">
+          <div className="w-full bg-dark-800 rounded-full h-3 mb-2">
             <div 
               className="bg-gradient-to-r from-primary-500 to-primary-600 h-3 rounded-full transition-all duration-500"
               style={{ width: `${userProgress?.progress_percentage || 0}%` }}
@@ -162,11 +162,11 @@ export default function Dashboard({ user }: DashboardProps) {
             const unlocked = isChapterUnlocked(index)
             
             return (
-              <div
+                <div
                 key={chapter.id}
-                className={`bg-dark-800 rounded-2xl p-6 transition-all duration-200 ${
+                className={`bg-dark-900 rounded-2xl p-6 transition-all duration-200 ${
                   unlocked 
-                    ? 'hover:bg-dark-750 hover:shadow-lg cursor-pointer' 
+                    ? 'hover:bg-dark-800 hover:shadow-lg cursor-pointer' 
                     : 'opacity-50 cursor-not-allowed'
                 }`}
               >
@@ -214,7 +214,7 @@ export default function Dashboard({ user }: DashboardProps) {
                     {completed ? 'Bekijk opnieuw' : 'Start hoofdstuk'}
                   </Link>
                 ) : (
-                  <div className="w-full bg-dark-700 text-dark-400 text-center py-2 px-4 rounded-lg font-medium">
+                  <div className="w-full bg-dark-800 text-dark-400 text-center py-2 px-4 rounded-lg font-medium">
                     🔒 Vergrendeld
                   </div>
                 )}

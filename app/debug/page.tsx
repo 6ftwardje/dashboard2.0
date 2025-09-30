@@ -41,7 +41,7 @@ export default function DebugLogin() {
 
   return (
     <div className="min-h-screen bg-dark-900 flex items-center justify-center p-4">
-      <div className="bg-dark-800 rounded-2xl p-6 max-w-md w-full">
+      <div className="bg-dark-900 rounded-2xl p-6 max-w-md w-full">
         <h1 className="text-2xl font-bold text-white mb-4">Debug Login</h1>
         
         <div className="space-y-4">
@@ -81,7 +81,7 @@ export default function DebugLogin() {
           </button>
           
           {result && (
-            <div className="bg-dark-700 p-3 rounded text-sm">
+            <div className="bg-dark-800 p-3 rounded text-sm">
               <pre className="text-white whitespace-pre-wrap">{result}</pre>
             </div>
           )}
