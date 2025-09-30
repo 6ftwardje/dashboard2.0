@@ -66,5 +66,5 @@ export default function ResourcesPage() {
     return null
   }
 
-  return <ResourcesView resources={resources} />
+  return <ResourcesView resources={resources} userEmail={user.email} />
 }

@@ -24,17 +24,17 @@ module.exports = {
           900: '#7c2d12',
         },
         dark: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
-          950: '#020617',
+          50: '#f8fafc',   // Lightest gray
+          100: '#f1f5f9',  // Very light gray
+          200: '#e2e8f0',  // Light gray
+          300: '#cbd5e1',  // Medium light gray
+          400: '#94a3b8',  // Medium gray
+          500: '#64748b',  // Medium dark gray
+          600: '#475569',  // Dark gray
+          700: '#334155',  // Darker gray
+          800: '#1e293b',  // Very dark gray
+          900: '#0f172a',  // Almost black
+          950: '#000000',  // Pure black
         }
       },
     },

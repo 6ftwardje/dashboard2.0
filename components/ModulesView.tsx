@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { supabase } from '@/lib/supabase/client'
 import { User } from '@supabase/supabase-js'
 import { Module, ModuleProgress, UserProgress } from '@/lib/types'
+import Navigation from '@/components/Navigation'
 
 interface ModulesViewProps {
   user: User
@@ -123,7 +124,7 @@ export default function ModulesView({ user }: ModulesViewProps) {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-dark-950 flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
           <p className="text-dark-400">Modules laden...</p>
@@ -133,29 +134,24 @@ export default function ModulesView({ user }: ModulesViewProps) {
   }
 
   return (
-    <div className="min-h-screen bg-dark-950">
+    <div className="min-h-screen bg-black">
       {/* Header */}
-      <header className="bg-dark-900 border-b border-dark-800">
+      <header className="bg-dark-900 border-b border-dark-800 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div>
-              <h1 className="text-2xl font-bold text-white">Cryptoriez Cursus</h1>
-              <p className="text-dark-400">Welkom terug, {user.email}</p>
-            </div>
-            <div className="flex items-center space-x-4">
-              <Link
-                href="/resources"
-                className="text-primary-400 hover:text-primary-300 transition-colors"
-              >
-                Belangrijke Links
-              </Link>
-              <Link
-                href="/logout"
-                className="bg-dark-800 hover:bg-dark-700 text-white px-4 py-2 rounded-lg transition-colors"
-              >
-                Uitloggen
+            <div className="flex items-center">
+              <Link href="/modules" className="flex items-center">
+                <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center mr-3">
+                  <span className="text-white font-bold text-sm">C</span>
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold text-white">Cryptoriez</h1>
+                  <p className="text-xs text-dark-400">Cursus Dashboard</p>
+                </div>
               </Link>
             </div>
+            
+            <Navigation userEmail={user.email} />
           </div>
         </div>
       </header>

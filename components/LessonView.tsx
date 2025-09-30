@@ -8,6 +8,7 @@ import { supabase } from '@/lib/supabase/client'
 import { User } from '@supabase/supabase-js'
 import { Lesson } from '@/lib/types'
 import { useToast } from '@/components/ToastProvider'
+import Navigation from '@/components/Navigation'
 
 interface LessonViewProps {
   lesson: Lesson
@@ -92,36 +93,24 @@ export default function LessonView({ lesson, user }: LessonViewProps) {
   }
 
   return (
-    <div className="min-h-screen bg-dark-950">
+    <div className="min-h-screen bg-black">
       {/* Header */}
-      <header className="bg-dark-900 border-b border-dark-800">
+      <header className="bg-dark-900 border-b border-dark-800 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-4">
-              <Link
-                href="/modules"
-                className="text-primary-400 hover:text-primary-300 transition-colors flex items-center"
-              >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-                Terug naar Modules
+            <div className="flex items-center">
+              <Link href="/modules" className="flex items-center">
+                <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center mr-3">
+                  <span className="text-white font-bold text-sm">C</span>
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold text-white">Cryptoriez</h1>
+                  <p className="text-xs text-dark-400">Cursus Dashboard</p>
+                </div>
               </Link>
             </div>
-            <div className="flex items-center space-x-4">
-              <Link
-                href="/resources"
-                className="text-primary-400 hover:text-primary-300 transition-colors"
-              >
-                Belangrijke Links
-              </Link>
-              <Link
-                href="/logout"
-                className="bg-dark-800 hover:bg-dark-700 text-white px-4 py-2 rounded-lg transition-colors"
-              >
-                Uitloggen
-              </Link>
-            </div>
+            
+            <Navigation userEmail={user.email} />
           </div>
         </div>
       </header>
